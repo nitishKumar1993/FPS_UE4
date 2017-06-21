@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\FPS_UE4.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{5B8352B6-A74B-47B2-ADC0-A2B34AA3ED2E}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\FPS_UE4.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\FPS_UE4Editor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{93847B9B-0ED2-42C7-9069-03191B8E695B}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\FPS_UE4">
+			<UniqueIdentifier>{5BCABA9E-853F-498A-8EAE-52CCAA5BD515}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\FPS_UE4\FPS_UE4.Build.cs">
+			<Filter>Source\FPS_UE4</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\FPS_UE4\FPS_UE4.cpp">
+			<Filter>Source\FPS_UE4</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\FPS_UE4\FPS_UE4.h">
+			<Filter>Source\FPS_UE4</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\FPS_UE4\FPS_UE4GameModeBase.cpp">
+			<Filter>Source\FPS_UE4</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\FPS_UE4\FPS_UE4GameModeBase.h">
+			<Filter>Source\FPS_UE4</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
