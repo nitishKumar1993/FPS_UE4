@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<None Include="..\..\FPS_UE4.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{5B8352B6-A74B-47B2-ADC0-A2B34AA3ED2E}</UniqueIdentifier>
+			<UniqueIdentifier>{B2F49454-C0B3-43B2-830E-1718D4B51D70}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\FPS_UE4.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{93847B9B-0ED2-42C7-9069-03191B8E695B}</UniqueIdentifier>
+			<UniqueIdentifier>{98FE1806-0D87-435C-8198-6946835D82ED}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -25,7 +25,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\FPS_UE4">
-			<UniqueIdentifier>{5BCABA9E-853F-498A-8EAE-52CCAA5BD515}</UniqueIdentifier>
+			<UniqueIdentifier>{52A3A42E-30D1-4253-8E57-F6DE42F3A13F}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\FPS_UE4\FPS_UE4.Build.cs">
 			<Filter>Source\FPS_UE4</Filter>
