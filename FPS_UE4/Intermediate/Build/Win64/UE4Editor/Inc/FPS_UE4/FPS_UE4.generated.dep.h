@@ -5,6 +5,15 @@
 ===========================================================================*/
 
 #include "GeneratedCppIncludes.h"
-#ifndef FPS_UE4_FPS_UE4GameModeBase_generated_h
-	#include "FPS_UE4GameModeBase.h"
+#ifndef FPS_UE4_FPS_UE4Character_generated_h
+	#include "FPS_UE4Character.h"
+#endif
+#ifndef FPS_UE4_FPS_UE4GameMode_generated_h
+	#include "FPS_UE4GameMode.h"
+#endif
+#ifndef FPS_UE4_FPS_UE4HUD_generated_h
+	#include "FPS_UE4HUD.h"
+#endif
+#ifndef FPS_UE4_FPS_UE4Projectile_generated_h
+	#include "FPS_UE4Projectile.h"
 #endif

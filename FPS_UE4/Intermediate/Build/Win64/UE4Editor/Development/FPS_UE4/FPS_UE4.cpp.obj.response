@@ -314,10 +314,11 @@
 /I E:\SoftWares\UE4\UE_4.16\Engine\Source\Runtime\AudioMixer\Public\DSP
 /I E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AudioMixer
 /I E:\SoftWares\UE4\UE_4.16\Engine\Source\Runtime\AudioMixer
-/FI"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\PCH.FPS_UE4.h"
-/Yu"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\PCH.FPS_UE4.h"
-/Fp"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\PCH.FPS_UE4.h.pch"
+/FI"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
+/Yu"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
+/Fp"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
 "D:\Github Repos\FPS_UE4\Source\FPS_UE4\FPS_UE4.cpp"
+/FI"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\Definitions.FPS_UE4.h"
 /Fo"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4.cpp.obj"
 /TP
 /GR-
