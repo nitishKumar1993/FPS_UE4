@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCode1FPS_UE4() {}
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API class UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
@@ -29,7 +30,6 @@ void EmptyLinkFunctionForGeneratedCode1FPS_UE4() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
-	ENGINE_API class UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
@@ -66,6 +66,7 @@ void EmptyLinkFunctionForGeneratedCode1FPS_UE4() {}
 
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_FireParticle = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FireParticle"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FireParticle, AFPS_UE4Character), 0x001000000008000d, Z_Construct_UClass_UParticleSystemComponent_NoRegister());
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bUsingMotionControllers, AFPS_UE4Character, uint8);
 				UProperty* NewProp_bUsingMotionControllers = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bUsingMotionControllers"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bUsingMotionControllers, AFPS_UE4Character), 0x0010000000000005, CPP_BOOL_PROPERTY_BITMASK(bUsingMotionControllers, AFPS_UE4Character), sizeof(uint8), false);
 				UProperty* NewProp_FireAnimation = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FireAnimation"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FireAnimation, AFPS_UE4Character), 0x0010000000000005, Z_Construct_UClass_UAnimMontage_NoRegister());
@@ -92,6 +93,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("FPS_UE4Character.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("FPS_UE4Character.h"));
+				MetaData->SetValue(NewProp_FireParticle, TEXT("Category"), TEXT("Gameplay"));
+				MetaData->SetValue(NewProp_FireParticle, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_FireParticle, TEXT("ModuleRelativePath"), TEXT("FPS_UE4Character.h"));
 				MetaData->SetValue(NewProp_bUsingMotionControllers, TEXT("Category"), TEXT("Gameplay"));
 				MetaData->SetValue(NewProp_bUsingMotionControllers, TEXT("ModuleRelativePath"), TEXT("FPS_UE4Character.h"));
 				MetaData->SetValue(NewProp_bUsingMotionControllers, TEXT("ToolTip"), TEXT("Whether to use motion controller location for aiming."));
@@ -154,7 +158,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPS_UE4Character, 734525697);
+	IMPLEMENT_CLASS(AFPS_UE4Character, 3524882045);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AFPS_UE4Character(Z_Construct_UClass_AFPS_UE4Character, &AFPS_UE4Character::StaticClass, TEXT("/Script/FPS_UE4"), TEXT("AFPS_UE4Character"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AFPS_UE4Character);
 	void AFPS_UE4GameMode::StaticRegisterNativesAFPS_UE4GameMode()
@@ -346,7 +350,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/FPS_UE4")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xEEED3EFC;
+			Guid.A = 0x977F471F;
 			Guid.B = 0x58216983;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;

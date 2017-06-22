@@ -10,6 +10,9 @@
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "MotionControllerComponent.h"
+#include "ParticleDefinitions.h"
+#include "Particles/ParticleSystem.h"
+#include "Particles/ParticleSystemComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -51,6 +54,11 @@ AFPS_UE4Character::AFPS_UE4Character()
 	FP_MuzzleLocation = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzleLocation"));
 	FP_MuzzleLocation->SetupAttachment(FP_Gun);
 	FP_MuzzleLocation->SetRelativeLocation(FVector(0.2f, 48.4f, -10.6f));
+
+	FireParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FireParticle"));
+	FireParticle->SetupAttachment(GetCapsuleComponent());
+	FireParticle->SetRelativeLocation(FVector(0, 0, 0));
+	FireParticle->bAutoActivate = false;
 
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 0.0f, 10.0f);
@@ -171,6 +179,12 @@ void AFPS_UE4Character::OnFire()
 		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 	}
 
+	if (FireParticle != NULL)
+	{
+		FireParticle->ActivateSystem();
+	}
+
+	
 	// try and play a firing animation if specified
 	if (FireAnimation != NULL)
 	{
