@@ -22,9 +22,9 @@
 /wd4838
 /w44668
 /I E:\SoftWares\UE4\UE_4.16\Engine\Source
-/I "C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Source"
-/I "C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Inc\FPS_UE4"
-/I "C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Source\FPS_UE4"
+/I "D:\Github Repos\FPS_UE4\Source"
+/I "D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Inc\FPS_UE4"
+/I "D:\Github Repos\FPS_UE4\Source\FPS_UE4"
 /I E:\SoftWares\UE4\UE_4.16\Engine\Source\Runtime\Core\Public
 /I E:\SoftWares\UE4\UE_4.16\Engine\Source\Runtime\Core\Public\Internationalization
 /I E:\SoftWares\UE4\UE_4.16\Engine\Source\Runtime\Core\Public\Async
@@ -316,9 +316,9 @@
 /FI"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Inc\FPS_UE4\FPS_UE4.generated.cpp"
-/FI"C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\Definitions.FPS_UE4.h"
-/Fo"C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4.generated.cpp.obj"
+"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Inc\FPS_UE4\FPS_UE4.generated.cpp"
+/FI"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\Definitions.FPS_UE4.h"
+/Fo"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4.generated.cpp.obj"
 /TP
 /GR-
 /W4
