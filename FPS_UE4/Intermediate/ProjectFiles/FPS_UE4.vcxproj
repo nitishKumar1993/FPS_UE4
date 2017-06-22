@@ -84,7 +84,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{29CAC262-F208-4059-A7FF-4D2CE3C9B40A}</ProjectGuid>
+		<ProjectGuid>{DA0ECEA3-5BD5-410A-B5F7-3B49F6DBCDE0}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>FPS_UE4</RootNamespace>
        <PlatformToolset>v141</PlatformToolset>

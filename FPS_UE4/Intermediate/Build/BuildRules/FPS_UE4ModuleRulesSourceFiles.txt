@@ -1,3 +1,3 @@
-D:\Github Repos\FPS_UE4\Source\FPS_UE4\FPS_UE4.Build.cs
-D:\Github Repos\FPS_UE4\Source\FPS_UE4.Target.cs
-D:\Github Repos\FPS_UE4\Source\FPS_UE4Editor.Target.cs
+C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Source\FPS_UE4\FPS_UE4.Build.cs
+C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Source\FPS_UE4.Target.cs
+C:\Users\Wala Design PC 3\Documents\Unreal Projects\FPS_UE4\Source\FPS_UE4Editor.Target.cs
