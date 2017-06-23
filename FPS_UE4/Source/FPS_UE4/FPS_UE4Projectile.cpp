@@ -52,7 +52,7 @@ void AFPS_UE4Projectile::OnHit(UPrimitiveComponent * HitComp, AActor * OtherActo
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL))
 	{ 
-		if(OtherComp->Mobility == (EComponentMobility::Movable))
+		if(OtherComp->Mobility == (EComponentMobility::Movable) && OtherComp->IsSimulatingPhysics())
 			OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 
 		m_explosionParticle->ActivateSystem();

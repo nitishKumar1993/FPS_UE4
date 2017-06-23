@@ -56,7 +56,7 @@ AFPS_UE4Character::AFPS_UE4Character()
 	FP_MuzzleLocation->SetRelativeLocation(FVector(0.2f, 48.4f, -10.6f));
 
 	FireParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FireParticle"));
-	FireParticle->SetupAttachment(GetCapsuleComponent());
+	FireParticle->SetupAttachment(FP_MuzzleLocation);
 	FireParticle->SetRelativeLocation(FVector(0, 0, 0));
 	FireParticle->bAutoActivate = false;
 
