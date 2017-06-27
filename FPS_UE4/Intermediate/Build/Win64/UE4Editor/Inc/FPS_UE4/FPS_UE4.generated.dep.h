@@ -17,3 +17,6 @@
 #ifndef FPS_UE4_FPS_UE4Projectile_generated_h
 	#include "FPS_UE4Projectile.h"
 #endif
+#ifndef FPS_UE4_HealthDroppable_generated_h
+	#include "HealthDroppable.h"
+#endif

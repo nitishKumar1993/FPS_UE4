@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "FPS_UE4.h"
 #include "GameFramework/Actor.h"
 #include "FPS_UE4Projectile.generated.h"
 

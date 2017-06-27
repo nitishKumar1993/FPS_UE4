@@ -8,13 +8,48 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef FPS_UE4_FPS_UE4Character_generated_h
 #error "FPS_UE4Character.generated.h already included, missing '#pragma once' in FPS_UE4Character.h"
 #endif
 #define FPS_UE4_FPS_UE4Character_generated_h
 
-#define FPS_UE4_Source_FPS_UE4_FPS_UE4Character_h_14_RPC_WRAPPERS
-#define FPS_UE4_Source_FPS_UE4_FPS_UE4Character_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define FPS_UE4_Source_FPS_UE4_FPS_UE4Character_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnPlayerBeginOverlap) \
+	{ \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp); \
+		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex); \
+		P_GET_UBOOL(Z_Param_bFromSweep); \
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnPlayerBeginOverlap(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
+		P_NATIVE_END; \
+	}
+
+
+#define FPS_UE4_Source_FPS_UE4_FPS_UE4Character_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnPlayerBeginOverlap) \
+	{ \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp); \
+		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex); \
+		P_GET_UBOOL(Z_Param_bFromSweep); \
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnPlayerBeginOverlap(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
+		P_NATIVE_END; \
+	}
+
+
 #define FPS_UE4_Source_FPS_UE4_FPS_UE4Character_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPS_UE4Character(); \
@@ -67,7 +102,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPS_UE4Character); \
 	FORCEINLINE static uint32 __PPO__VR_MuzzleLocation() { return STRUCT_OFFSET(AFPS_UE4Character, VR_MuzzleLocation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AFPS_UE4Character, FirstPersonCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__R_MotionController() { return STRUCT_OFFSET(AFPS_UE4Character, R_MotionController); } \
-	FORCEINLINE static uint32 __PPO__L_MotionController() { return STRUCT_OFFSET(AFPS_UE4Character, L_MotionController); }
+	FORCEINLINE static uint32 __PPO__L_MotionController() { return STRUCT_OFFSET(AFPS_UE4Character, L_MotionController); } \
+	FORCEINLINE static uint32 __PPO__m_trigger1() { return STRUCT_OFFSET(AFPS_UE4Character, m_trigger1); }
 
 
 #define FPS_UE4_Source_FPS_UE4_FPS_UE4Character_h_11_PROLOG

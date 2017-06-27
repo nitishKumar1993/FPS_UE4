@@ -1,12 +1,6 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "FPS_UE4Projectile.h"
-#include "ParticleDefinitions.h"
-#include "Particles/ParticleSystem.h"
-#include "Particles/ParticleSystemComponent.h"
-#include "GameFramework/ProjectileMovementComponent.h"
-#include "Components/SphereComponent.h"
-#include "Components/StaticMeshComponent.h"
 
 AFPS_UE4Projectile::AFPS_UE4Projectile() 
 {

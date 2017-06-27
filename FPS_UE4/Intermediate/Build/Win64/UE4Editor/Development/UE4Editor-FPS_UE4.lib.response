@@ -6,13 +6,14 @@
 /NAME:"UE4Editor-FPS_UE4.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"E:\Program Files (x86)\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
 "D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4.cpp.obj"
 "D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4Character.cpp.obj"
 "D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4GameMode.cpp.obj"
 "D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4HUD.cpp.obj"
 "D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4Projectile.cpp.obj"
+"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\HealthDroppable.cpp.obj"
 "D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\FPS_UE4.generated.cpp.obj"
-"E:\Program Files (x86)\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\PCLaunch.rc.res"
-"E:\Program Files (x86)\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\FPS_UE4\PCLaunch.rc.res"
+"E:\SoftWares\UE4\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
 /OUT:"D:\Github Repos\FPS_UE4\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPS_UE4.lib"

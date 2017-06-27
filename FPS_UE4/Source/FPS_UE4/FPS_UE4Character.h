@@ -45,6 +45,9 @@ class AFPS_UE4Character : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class UMotionControllerComponent* L_MotionController;
 
+	UPROPERTY(EditAnywhere, Category = Gameplay)
+	class ATriggerVolume* m_trigger1;
+
 public:
 	AFPS_UE4Character();
 
@@ -82,6 +85,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UParticleSystemComponent* FireParticle;
+
+	UFUNCTION()
+		void OnPlayerBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 protected:
 	

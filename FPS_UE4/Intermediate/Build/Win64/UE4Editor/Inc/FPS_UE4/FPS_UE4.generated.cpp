@@ -15,25 +15,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1FPS_UE4() {}
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	ENGINE_API class UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API class UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API class UClass* Z_Construct_UClass_ATriggerVolume_NoRegister();
 	HEADMOUNTEDDISPLAY_API class UClass* Z_Construct_UClass_UMotionControllerComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
 	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
-	ENGINE_API class UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
-	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
-	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 
+	FPS_UE4_API class UFunction* Z_Construct_UFunction_AFPS_UE4Character_OnPlayerBeginOverlap();
 	FPS_UE4_API class UClass* Z_Construct_UClass_AFPS_UE4Character_NoRegister();
 	FPS_UE4_API class UClass* Z_Construct_UClass_AFPS_UE4Character();
 	FPS_UE4_API class UClass* Z_Construct_UClass_AFPS_UE4GameMode_NoRegister();
@@ -43,9 +46,53 @@ void EmptyLinkFunctionForGeneratedCode1FPS_UE4() {}
 	FPS_UE4_API class UFunction* Z_Construct_UFunction_AFPS_UE4Projectile_OnHit();
 	FPS_UE4_API class UClass* Z_Construct_UClass_AFPS_UE4Projectile_NoRegister();
 	FPS_UE4_API class UClass* Z_Construct_UClass_AFPS_UE4Projectile();
+	FPS_UE4_API class UFunction* Z_Construct_UFunction_AHealthDroppable_Explode();
+	FPS_UE4_API class UFunction* Z_Construct_UFunction_AHealthDroppable_OnDroppableGotHit();
+	FPS_UE4_API class UClass* Z_Construct_UClass_AHealthDroppable_NoRegister();
+	FPS_UE4_API class UClass* Z_Construct_UClass_AHealthDroppable();
 	FPS_UE4_API class UPackage* Z_Construct_UPackage__Script_FPS_UE4();
 	void AFPS_UE4Character::StaticRegisterNativesAFPS_UE4Character()
 	{
+		UClass* Class = AFPS_UE4Character::StaticClass();
+		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
+			{ "OnPlayerBeginOverlap", (Native)&AFPS_UE4Character::execOnPlayerBeginOverlap },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 1);
+	}
+	UFunction* Z_Construct_UFunction_AFPS_UE4Character_OnPlayerBeginOverlap()
+	{
+		struct FPS_UE4Character_eventOnPlayerBeginOverlap_Parms
+		{
+			UPrimitiveComponent* OverlappedComp;
+			AActor* OtherActor;
+			UPrimitiveComponent* OtherComp;
+			int32 OtherBodyIndex;
+			bool bFromSweep;
+			FHitResult SweepResult;
+		};
+		UObject* Outer=Z_Construct_UClass_AFPS_UE4Character();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnPlayerBeginOverlap"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00420401, 65535, sizeof(FPS_UE4Character_eventOnPlayerBeginOverlap_Parms));
+			UProperty* NewProp_SweepResult = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SweepResult"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(SweepResult, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms), 0x0010008008000182, Z_Construct_UScriptStruct_FHitResult());
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(bFromSweep, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms, bool);
+			UProperty* NewProp_bFromSweep = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("bFromSweep"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bFromSweep, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(bFromSweep, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms), sizeof(bool), true);
+			UProperty* NewProp_OtherBodyIndex = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherBodyIndex"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(OtherBodyIndex, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms), 0x0010000000000080);
+			UProperty* NewProp_OtherComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComp, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_OverlappedComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OverlappedComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OverlappedComp, FPS_UE4Character_eventOnPlayerBeginOverlap_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("FPS_UE4Character.h"));
+			MetaData->SetValue(NewProp_SweepResult, TEXT("NativeConst"), TEXT(""));
+			MetaData->SetValue(NewProp_OtherComp, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_OverlappedComp, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AFPS_UE4Character_NoRegister()
 	{
@@ -64,6 +111,7 @@ void EmptyLinkFunctionForGeneratedCode1FPS_UE4() {}
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20800080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_AFPS_UE4Character_OnPlayerBeginOverlap());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_FireParticle = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FireParticle"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FireParticle, AFPS_UE4Character), 0x001000000008000d, Z_Construct_UClass_UParticleSystemComponent_NoRegister());
@@ -75,6 +123,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_GunOffset = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("GunOffset"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(GunOffset, AFPS_UE4Character), 0x0010000000000005, Z_Construct_UScriptStruct_FVector());
 				UProperty* NewProp_BaseLookUpRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseLookUpRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseLookUpRate, AFPS_UE4Character), 0x0010000000020015);
 				UProperty* NewProp_BaseTurnRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseTurnRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseTurnRate, AFPS_UE4Character), 0x0010000000020015);
+				UProperty* NewProp_m_trigger1 = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("m_trigger1"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(m_trigger1, AFPS_UE4Character), 0x0040000000000001, Z_Construct_UClass_ATriggerVolume_NoRegister());
 				UProperty* NewProp_L_MotionController = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("L_MotionController"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(L_MotionController, AFPS_UE4Character), 0x00400000000a001d, Z_Construct_UClass_UMotionControllerComponent_NoRegister());
 				UProperty* NewProp_R_MotionController = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("R_MotionController"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(R_MotionController, AFPS_UE4Character), 0x00400000000a001d, Z_Construct_UClass_UMotionControllerComponent_NoRegister());
 				UProperty* NewProp_FirstPersonCameraComponent = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FirstPersonCameraComponent"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FirstPersonCameraComponent, AFPS_UE4Character), 0x00400000000a001d, Z_Construct_UClass_UCameraComponent_NoRegister());
@@ -84,6 +133,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_FP_Gun = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FP_Gun"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FP_Gun, AFPS_UE4Character), 0x00400000000b0009, Z_Construct_UClass_USkeletalMeshComponent_NoRegister());
 				UProperty* NewProp_Mesh1P = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Mesh1P"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Mesh1P, AFPS_UE4Character), 0x00400000000b0009, Z_Construct_UClass_USkeletalMeshComponent_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AFPS_UE4Character_OnPlayerBeginOverlap(), "OnPlayerBeginOverlap"); // 2500615007
 				OuterClass->ClassConfigName = FName(TEXT("Game"));
 				static TCppClassTypeInfo<TCppClassTypeTraits<AFPS_UE4Character> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
@@ -117,6 +167,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(NewProp_BaseTurnRate, TEXT("Category"), TEXT("Camera"));
 				MetaData->SetValue(NewProp_BaseTurnRate, TEXT("ModuleRelativePath"), TEXT("FPS_UE4Character.h"));
 				MetaData->SetValue(NewProp_BaseTurnRate, TEXT("ToolTip"), TEXT("Base turn rate, in deg/sec. Other scaling may affect final turn rate."));
+				MetaData->SetValue(NewProp_m_trigger1, TEXT("Category"), TEXT("Gameplay"));
+				MetaData->SetValue(NewProp_m_trigger1, TEXT("ModuleRelativePath"), TEXT("FPS_UE4Character.h"));
 				MetaData->SetValue(NewProp_L_MotionController, TEXT("AllowPrivateAccess"), TEXT("true"));
 				MetaData->SetValue(NewProp_L_MotionController, TEXT("Category"), TEXT("FPS_UE4Character"));
 				MetaData->SetValue(NewProp_L_MotionController, TEXT("EditInline"), TEXT("true"));
@@ -158,7 +210,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPS_UE4Character, 3524882045);
+	IMPLEMENT_CLASS(AFPS_UE4Character, 87012826);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AFPS_UE4Character(Z_Construct_UClass_AFPS_UE4Character, &AFPS_UE4Character::StaticClass, TEXT("/Script/FPS_UE4"), TEXT("AFPS_UE4Character"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AFPS_UE4Character);
 	void AFPS_UE4GameMode::StaticRegisterNativesAFPS_UE4GameMode()
@@ -342,6 +394,124 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	IMPLEMENT_CLASS(AFPS_UE4Projectile, 1949471920);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AFPS_UE4Projectile(Z_Construct_UClass_AFPS_UE4Projectile, &AFPS_UE4Projectile::StaticClass, TEXT("/Script/FPS_UE4"), TEXT("AFPS_UE4Projectile"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AFPS_UE4Projectile);
+	void AHealthDroppable::StaticRegisterNativesAHealthDroppable()
+	{
+		UClass* Class = AHealthDroppable::StaticClass();
+		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
+			{ "Explode", (Native)&AHealthDroppable::execExplode },
+			{ "OnDroppableGotHit", (Native)&AHealthDroppable::execOnDroppableGotHit },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 2);
+	}
+	UFunction* Z_Construct_UFunction_AHealthDroppable_Explode()
+	{
+		UObject* Outer=Z_Construct_UClass_AHealthDroppable();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("Explode"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Gameplay"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AHealthDroppable_OnDroppableGotHit()
+	{
+		struct HealthDroppable_eventOnDroppableGotHit_Parms
+		{
+			UPrimitiveComponent* HitComponent;
+			AActor* OtherActor;
+			UPrimitiveComponent* OtherComponent;
+			FVector NormalImpulse;
+			FHitResult Hit;
+		};
+		UObject* Outer=Z_Construct_UClass_AHealthDroppable();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnDroppableGotHit"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00C20401, 65535, sizeof(HealthDroppable_eventOnDroppableGotHit_Parms));
+			UProperty* NewProp_Hit = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Hit"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(Hit, HealthDroppable_eventOnDroppableGotHit_Parms), 0x0010008008000182, Z_Construct_UScriptStruct_FHitResult());
+			UProperty* NewProp_NormalImpulse = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("NormalImpulse"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(NormalImpulse, HealthDroppable_eventOnDroppableGotHit_Parms), 0x0010000000000080, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_OtherComponent = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComponent"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComponent, HealthDroppable_eventOnDroppableGotHit_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, HealthDroppable_eventOnDroppableGotHit_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_HitComponent = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("HitComponent"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(HitComponent, HealthDroppable_eventOnDroppableGotHit_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+			MetaData->SetValue(NewProp_Hit, TEXT("NativeConst"), TEXT(""));
+			MetaData->SetValue(NewProp_OtherComponent, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_HitComponent, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_AHealthDroppable_NoRegister()
+	{
+		return AHealthDroppable::StaticClass();
+	}
+	UClass* Z_Construct_UClass_AHealthDroppable()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage__Script_FPS_UE4();
+			OuterClass = AHealthDroppable::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_AHealthDroppable_Explode());
+				OuterClass->LinkChild(Z_Construct_UFunction_AHealthDroppable_OnDroppableGotHit());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_m_trigger = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("m_trigger"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(m_trigger, AHealthDroppable), 0x0010000000080009, Z_Construct_UClass_UBoxComponent_NoRegister());
+				UProperty* NewProp_m_particleEnd = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("m_particleEnd"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(m_particleEnd, AHealthDroppable), 0x0010000000080009, Z_Construct_UClass_UParticleSystemComponent_NoRegister());
+				UProperty* NewProp_m_particleStill = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("m_particleStill"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(m_particleStill, AHealthDroppable), 0x0010000000080009, Z_Construct_UClass_UParticleSystemComponent_NoRegister());
+				UProperty* NewProp_m_collider = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("m_collider"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(m_collider, AHealthDroppable), 0x0010000000080009, Z_Construct_UClass_UBoxComponent_NoRegister());
+				UProperty* NewProp_m_meshComp = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("m_meshComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(m_meshComp, AHealthDroppable), 0x0010000000080009, Z_Construct_UClass_UStaticMeshComponent_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AHealthDroppable_Explode(), "Explode"); // 7732431
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AHealthDroppable_OnDroppableGotHit(), "OnDroppableGotHit"); // 4020182638
+				static TCppClassTypeInfo<TCppClassTypeTraits<AHealthDroppable> > StaticCppClassTypeInfo;
+				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("HealthDroppable.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+				MetaData->SetValue(NewProp_m_trigger, TEXT("Category"), TEXT("HealthDroppable"));
+				MetaData->SetValue(NewProp_m_trigger, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_m_trigger, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+				MetaData->SetValue(NewProp_m_particleEnd, TEXT("Category"), TEXT("HealthDroppable"));
+				MetaData->SetValue(NewProp_m_particleEnd, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_m_particleEnd, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+				MetaData->SetValue(NewProp_m_particleStill, TEXT("Category"), TEXT("HealthDroppable"));
+				MetaData->SetValue(NewProp_m_particleStill, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_m_particleStill, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+				MetaData->SetValue(NewProp_m_collider, TEXT("Category"), TEXT("HealthDroppable"));
+				MetaData->SetValue(NewProp_m_collider, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_m_collider, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+				MetaData->SetValue(NewProp_m_meshComp, TEXT("Category"), TEXT("HealthDroppable"));
+				MetaData->SetValue(NewProp_m_meshComp, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_m_meshComp, TEXT("ModuleRelativePath"), TEXT("HealthDroppable.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	IMPLEMENT_CLASS(AHealthDroppable, 395327277);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_AHealthDroppable(Z_Construct_UClass_AHealthDroppable, &AHealthDroppable::StaticClass, TEXT("/Script/FPS_UE4"), TEXT("AHealthDroppable"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AHealthDroppable);
 	UPackage* Z_Construct_UPackage__Script_FPS_UE4()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -350,8 +520,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/FPS_UE4")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x977F471F;
-			Guid.B = 0x58216983;
+			Guid.A = 0x2D6B99BF;
+			Guid.B = 0xAC418F43;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

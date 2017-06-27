@@ -23,6 +23,7 @@ AFPS_UE4Character::AFPS_UE4Character()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
+	//GetCapsuleComponent() ->OnComponentBeginOverlap()
 
 	// set our turn rates for input
 	BaseTurnRate = 45.f;
@@ -87,6 +88,7 @@ AFPS_UE4Character::AFPS_UE4Character()
 	VR_MuzzleLocation->SetRelativeLocation(FVector(0.000004, 53.999992, 10.000000));
 	VR_MuzzleLocation->SetRelativeRotation(FRotator(0.0f, 90.0f, 0.0f));		// Counteract the rotation of the VR gun model.
 
+	//m_trigger1 = CreateDefaultSubobject<ATriggerVolume>(TEXT("Trigger"));
 	// Uncomment the following line to turn motion controllers on by default:
 	//bUsingMotionControllers = true;
 }
@@ -141,6 +143,11 @@ void AFPS_UE4Character::SetupPlayerInputComponent(class UInputComponent* PlayerI
 	PlayerInputComponent->BindAxis("TurnRate", this, &AFPS_UE4Character::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFPS_UE4Character::LookUpAtRate);
+}
+
+void AFPS_UE4Character::OnPlayerBeginOverlap(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+{
+
 }
 
 void AFPS_UE4Character::OnFire()
